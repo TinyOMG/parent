@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import service.StudentService;
 
 @EnableEurekaClient
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
+@SpringBootApplication()
 @ComponentScan("service")
 @MapperScan("mapper")
 @RestController
