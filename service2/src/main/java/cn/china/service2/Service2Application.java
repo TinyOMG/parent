@@ -1,6 +1,7 @@
 package cn.china.service2;
 
 import entity.Student;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,6 +15,7 @@ import service.StudentService;
 @EnableEurekaClient
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 @ComponentScan("service")
+@MapperScan("mapper")
 @RestController
 public class Service2Application {
 

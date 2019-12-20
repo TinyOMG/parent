@@ -54,6 +54,16 @@ public class WebApplication {
    }
 
 
+   @RequestMapping(value="/insert",produces = "application/json;charset=UTF-8")
+   public int insert(HttpServletResponse res){
+       res.setHeader("Access-Control-Allow-Origin", "*");
+       int line=rest.getForObject("http://provider/insert",Integer.class);
+       System.out.println("========="+line);
+       return line;
+   }
+
+
+
     public static void main(String[] args) {
         SpringApplication.run(WebApplication.class, args);
     }
